@@ -4,7 +4,6 @@ import Card from "./Card";
 import "./Cards.css";
 
 export default function Cards({ data }) {
-    console.log('Putas', data)
   return (
     <div className="cardList">
       {data &&

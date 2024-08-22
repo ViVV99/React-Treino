@@ -1,4 +1,3 @@
-import { Outlet } from "react-router-dom";
 import "./App.css";
 import Cards from "../components/Cards";
 import { useEffect, useState } from "react";
@@ -12,12 +11,10 @@ function HomePage() {
     // inside useEffect :)
     (async () => {
         const data = await axios.get("pokemon/?offset=20&limit=10");
-        console.log('data', data);
         setPokemonList(data.data.results);
     })();
   }, []);
 
-  console.log('pokemonList', pokemonList);
   return (
     <div className="main">
       <h1>Meu Nome e Vitor</h1>

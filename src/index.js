@@ -3,9 +3,9 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
-import HomePage from "./pages/HomePage";
-
 import MainLayout from "./layouts/MainLayout";
+import HomePage from "./pages/HomePage";
+import Pokemon from "./pages/pokemon";
 
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
@@ -21,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <div>Contact</div>
+      },
+      {
+        path: '/pokemons/:name',
+        element: <Pokemon />
       }
     ]
   }
